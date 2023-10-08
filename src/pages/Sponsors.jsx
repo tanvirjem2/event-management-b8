@@ -9,11 +9,11 @@ const Sponsors = () => {
         <div className="mt-24">
             <h2 className="text-center font-bold text-4xl">Our Sponsors</h2>
             <div className="flex items-center justify-evenly mt-10">
-                <img src={google} alt="" />
-                <img src={amazon} alt="" />
-                <img src={figma} alt="" />
-                <img src={spotify} alt="" />
-                <img src={telerama} alt="" />
+                <img className="drop-shadow-lg" src={google} alt="" />
+                <img className="drop-shadow-lg" src={amazon} alt="" />
+                <img className="drop-shadow-lg" src={figma} alt="" />
+                <img className="drop-shadow-lg" src={spotify} alt="" />
+                <img className="drop-shadow-lg" src={telerama} alt="" />
             </div>
         </div>
     );
