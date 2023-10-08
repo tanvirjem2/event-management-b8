@@ -26,7 +26,6 @@ const Service = ({ service }) => {
             </h4>
             <p className="font-semibold mt-5">{price}</p>
             <div className="flex items-center justify-between mt-4">
-                <button className="btn text-white bg-sky-500">Book Now</button>
                 <button className="btn text-white bg-sky-500">Details</button>
             </div>
         </div>

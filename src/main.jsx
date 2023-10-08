@@ -11,12 +11,14 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import AuthProvider from './providers/AuthProvider';
+import ErrorPage from './ErrorPage/ErrorPage';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <ErrorPage />,
     children: [
       { path: "/", element: <Home />, loader: () => fetch('/Data.json') },
       { path: "/login", element: <Login /> },
