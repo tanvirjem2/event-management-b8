@@ -3,6 +3,8 @@ import Service from "./Service";
 import Navbar from "../Shared/Navbar";
 import Banner from "./Banner";
 import Footer from "./Footer";
+import Customer from "./Customer";
+import Customers from "./Customers";
 
 
 const Home = () => {
@@ -18,6 +20,7 @@ const Home = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
                     {services.map(service => <Service key={service.id} service={service}></Service>)}
                 </div>
+                <Customers />
                 <Footer />
             </div>
         </div>
