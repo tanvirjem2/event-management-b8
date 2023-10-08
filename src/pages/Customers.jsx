@@ -13,8 +13,8 @@ const Customers = () => {
 
     return (
         <div>
-            <h2 className="text-center font-semibold text-3xl mt-10">Our Customer Reviews</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-10">
+            <h2 className="text-center font-semibold text-3xl mt-24">Our Customer Reviews</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-24">
                 {customers.map(customer => <Customer key={customer.id} customer={customer}></Customer>)}
             </div>
         </div>

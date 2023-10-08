@@ -5,6 +5,7 @@ import Banner from "./Banner";
 import Footer from "./Footer";
 import Customer from "./Customer";
 import Customers from "./Customers";
+import Sponsors from "./Sponsors";
 
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
                     {services.map(service => <Service key={service.id} service={service}></Service>)}
                 </div>
                 <Customers />
+                <Sponsors />
                 <Footer />
             </div>
         </div>

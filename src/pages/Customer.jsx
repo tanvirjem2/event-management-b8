@@ -5,7 +5,7 @@ const Customer = ({ customer }) => {
     const { id, name, reviewText, rating, img } = customer
 
     return (
-        <div className="rounded-lg p-5 text-center space-y-2 shadow-lg">
+        <div className="rounded-lg p-5 text-center space-y-2 shadow-xl">
             <img className="rounded-full w-[60px] h-[60px] mx-auto mb-10" src={img} alt="" />
             <p className="font-bold">{name}</p>
             <p>{reviewText}</p>
