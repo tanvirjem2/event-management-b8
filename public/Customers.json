@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Emily Johnson",
+        "rating": 5,
+        "reviewText": "I couldn't be happier with the wedding planning services provided by this team. They turned our dream wedding into a reality, and every detail was flawless. The entire process was stress-free, and the results were beyond our expectations. Highly recommended!"
+    },
+    {
+        "id": 2,
+        "name": "David Smith",
+        "rating": 4,
+        "reviewText": "We hired this company to organize a surprise birthday party for my wife, and it was a huge success. The team was professional, creative, and attentive to our requests. The party was a blast, and we received so many compliments from our guests. I'm giving them four stars because there's always room for improvement, but overall, we were very satisfied."
+    },
+    {
+        "id": 3,
+        "name": "Sarah Wilson",
+        "rating": 5,
+        "reviewText": "I used this service for my baby shower, and it was an absolute delight. They captured the theme and ambiance I envisioned perfectly. The decorations were charming, the games were fun, and everyone had a wonderful time. I highly recommend their baby shower planning services to any expecting parent!"
+    }
+]

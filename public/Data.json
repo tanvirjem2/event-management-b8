@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "name": "Weddings",
+        "image": "https://i.ibb.co/z4zxmj4/Weddings.png",
+        "price": "$5000",
+        "description": "Make your special day truly unforgettable with our expert wedding planning services. From choosing the perfect venue to creating a stunning decor, we'll take care of every detail so you can focus on celebrating your love. Our team of experienced professionals is dedicated to making your wedding dreams come true.",
+        "button": {
+            "text": "Book Now",
+            "color": "#FF5733"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Birthday Parties",
+        "image": "https://i.ibb.co/CHDpsP4/Blue-White-And-Pink-Happy-Birthday-Banner-Landscape.png",
+        "price": "$300",
+        "description": "Celebrate your birthday in style with our comprehensive party planning services. We offer a wide range of themes, entertainment options, and delicious catering to ensure your party is a hit. Let us handle the logistics while you enjoy your special day with friends and family.",
+        "button": {
+            "text": "Book Now",
+            "color": "#42A5F5"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Anniversaries",
+        "image": "https://i.ibb.co/1T73wfH/Aniversary.png",
+        "price": "$800",
+        "description": "Mark your special milestone with our anniversary planning services. Whether it's your first or fiftieth anniversary, we'll create a romantic and memorable experience for you and your partner. From intimate dinners to grand celebrations, we'll make your anniversary one to remember.",
+        "button": {
+            "text": "Book Now",
+            "color": "#FFC107"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Engagement Parties",
+        "image": "https://i.ibb.co/Sw14Kxm/Sunset-Boats-Engagement-Party-Invitation.png",
+        "price": "$400",
+        "description": "Celebrate your engagement with our expert party planning services. We'll help you throw a dazzling engagement party that reflects your unique style and love story. Our team will handle everything, from venue selection to entertainment, so you can focus on sharing the joy of your engagement with loved ones.",
+        "button": {
+            "text": "Book Now",
+            "color": "#4CAF50"
+        }
+    },
+    {
+        "id": 5,
+        "name": "Retirement Parties",
+        "image": "https://i.ibb.co/ThvCMfw/Checkered-Retirement-Party-Invitation.png",
+        "price": "$600",
+        "description": "Bid farewell to your working days with a memorable retirement party planned by us. We specialize in creating retirement celebrations that honor your career achievements and celebrate the exciting journey ahead. Let us handle the logistics while you enjoy the well-deserved recognition.",
+        "button": {
+            "text": "Book Now",
+            "color": "#FF9800"
+        }
+    },
+    {
+        "id": 6,
+        "name": "Baby Shower",
+        "image": "https://i.ibb.co/SJqYPqF/White-and-Pink-Cute-Baby-Shower-Invitation.png",
+        "price": "$200",
+        "description": "Welcome the new addition to your family with a beautiful baby shower organized by our experienced team. We'll create a charming and heartwarming event to celebrate this special moment in your life. From adorable decorations to delightful games, we'll make your baby shower a cherished memory.",
+        "button": {
+            "text": "Book Now",
+            "color": "#9C27B0"
+        }
+    }
+]
