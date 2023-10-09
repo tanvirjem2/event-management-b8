@@ -15,6 +15,16 @@ const Login = () => {
 
     const [logInError, setLogInError] = useState('')
 
+    if (logInError) {
+        toast(`${logInError}`)
+    }
+
+    const [success, setSuccess] = useState('')
+
+    if (success) {
+        toast(`${success}`)
+    }
+
     useEffect(() => {
         Aos.init({ duration: 1000 });
     }, [])
@@ -34,10 +44,14 @@ const Login = () => {
         const email = form.get('email')
         const password = form.get('password')
 
+        setLogInError('')
+        setSuccess('')
+
         // SignIn
         signIn(email, password)
             .then(result => {
                 console.log(result.user)
+                setSuccess('Login Successfully')
 
                 // navigate after login
                 navigate(location?.state ? location.state : '/')
@@ -45,9 +59,6 @@ const Login = () => {
             .catch(error => {
                 console.error(error)
                 setLogInError(error.message)
-                if (logInError) {
-                    toast(`${logInError}`)
-                }
             })
     }
 

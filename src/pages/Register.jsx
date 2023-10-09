@@ -11,6 +11,16 @@ const Register = () => {
 
     const [registerError, setRegisterError] = useState('')
 
+    if (registerError) {
+        toast(`${registerError}`)
+    }
+
+    const [success, setSuccess] = useState('')
+
+    if (success) {
+        toast(`${success}`)
+    }
+
     useEffect(() => {
         Aos.init({ duration: 1000 });
     }, [])
@@ -26,20 +36,32 @@ const Register = () => {
         const password = form.get('password')
         console.log(name);
 
+        // reset error
+        setRegisterError('')
+        setSuccess('')
+
+        if (password.length < 6) {
+
+            setRegisterError('Password should be at least 6 characters')
+
+        } else if (/^[a-z0-9]{1,5}$/i.test(password)) {
+
+            setRegisterError('Please use a proper password');
+        }
+
         // Create user
         createUser(email, password)
             .then(result => {
                 console.log(result.user);
+                setSuccess('User Created Successfully')
             })
             // Error
             .catch(error => {
                 console.error(error);
                 setRegisterError(error.message)
-                if (registerError) {
-                    toast(`${registerError}`)
-                }
             })
     }
+
 
     return (
         <div>
