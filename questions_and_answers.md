@@ -43,9 +43,9 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C
 
-<i>Write your explanation here</i>
+<i>The second argument passing to the sum function is a string "2". JavaScript will perform type coercion and convert the number 1 to a string, then concatenate it with the string "2", resulting in the string "12".</i>
 
 </p>
 </details>
@@ -94,9 +94,9 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: D
 
-<i>Write your explanation here</i>
+<i> In the sayHi function, the name parameter is missing an argument when I call sayHi() in the console.log, which leads to an error because there's no specified value for name.</i>
 
 </p>
 </details>
@@ -122,9 +122,9 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C
 
-<i>Write your explanation here</i>
+<i>The code initializes the count variable to 0 and defines an array called nums with four elements. It then uses the forEach method to loop through the elements of the nums array and increments the count variable whenever a non-zero (truthy) value is encountered. After the loop finishes, the count variable holds the count of non-zero elements in the nums array, which is 3. The final console.log(count) statement prints the value of count, which is 3.</i>
 
 </p>
 </details>
