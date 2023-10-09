@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
 import Navbar from "../Shared/Navbar";
-import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 

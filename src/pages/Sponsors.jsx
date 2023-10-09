@@ -16,7 +16,7 @@ const Sponsors = () => {
     return (
         <div className="mt-24">
             <h2 className="text-center font-bold text-4xl">Our Sponsors</h2>
-            <div className="flex items-center justify-evenly mt-10">
+            <div className="flex flex-col lg:flex-row space-y-6 items-center justify-evenly mt-10">
                 <div data-aos="zoom-out-up">
                     <img className="drop-shadow-lg" src={google} alt="" />
                 </div>

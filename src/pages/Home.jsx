@@ -13,7 +13,7 @@ const Home = () => {
 
     return (
         <div>
-            <div>
+            <div className="p-2">
                 <Navbar />
                 <Banner />
                 <h2 className="text-center font-semibold text-4xl my-24">Our Services</h2>
