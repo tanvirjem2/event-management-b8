@@ -3,7 +3,6 @@ import Service from "./Service";
 import Navbar from "../Shared/Navbar";
 import Banner from "./Banner";
 import Footer from "./Footer";
-import Customer from "./Customer";
 import Customers from "./Customers";
 import Sponsors from "./Sponsors";
 
@@ -14,7 +13,7 @@ const Home = () => {
 
     return (
         <div>
-            <div className="border-2 mt-10 rounded-lg p-5">
+            <div>
                 <Navbar />
                 <Banner />
                 <h2 className="text-center font-semibold text-4xl my-24">Our Services</h2>

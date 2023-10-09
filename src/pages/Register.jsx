@@ -1,8 +1,15 @@
 import { useContext } from "react";
 import Navbar from "../Shared/Navbar";
 import { AuthContext } from "../providers/AuthProvider";
+import Aos from "aos"
+import 'aos/dist/aos.css'
+import { useEffect } from "react"
 
 const Register = () => {
+
+    useEffect(() => {
+        Aos.init({ duration: 1000 });
+    }, [])
 
     const { createUser } = useContext(AuthContext)
 
@@ -29,7 +36,7 @@ const Register = () => {
     return (
         <div>
             <Navbar />
-            <div className="border-2 mt-10 rounded-lg p-5 lg:w-1/2 mx-auto">
+            <div data-aos="zoom-in-down" className="border-2 mt-10 rounded-lg p-5 lg:w-1/2 mx-auto">
                 <h2 className="font-semibold text-center text-3xl">Register Now!</h2>
                 <form onSubmit={handleRegister} className="space-y-3 mt-10">
                     <h2>Name</h2>

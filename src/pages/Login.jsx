@@ -4,7 +4,15 @@ import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 
+import Aos from "aos"
+import 'aos/dist/aos.css'
+import { useEffect } from "react"
+
 const Login = () => {
+
+    useEffect(() => {
+        Aos.init({ duration: 1000 });
+    }, [])
 
 
     const { signIn } = useContext(AuthContext)
@@ -37,7 +45,7 @@ const Login = () => {
     return (
         <div>
             <Navbar />
-            <div className="border-2 mt-10 rounded-lg p-7 lg:w-1/2 mx-auto">
+            <div data-aos="fade-right" className="border-2 mt-10 rounded-lg p-7 lg:w-1/2 mx-auto">
                 <h2 className="font-semibold text-center text-3xl">Login Now!</h2>
                 <form onSubmit={handleLogin} className="space-y-3 mt-10">
                     <h2>Email</h2>
