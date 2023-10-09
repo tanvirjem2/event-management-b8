@@ -11,7 +11,7 @@ const Service = ({ service }) => {
 
     console.log(service)
 
-    const { name, image, description, id, price } = service
+    const { name, image, description, id, price } = service;
 
     return (
         <div data-aos="zoom-out-up" className="border-2 rounded-lg p-5 flex flex-col">
