@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Navbar from "../Shared/Navbar";
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -8,7 +8,12 @@ import Aos from "aos"
 import 'aos/dist/aos.css'
 import { useEffect } from "react"
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Login = () => {
+
+    const [logInError, setLogInError] = useState('')
 
     useEffect(() => {
         Aos.init({ duration: 1000 });
@@ -39,6 +44,10 @@ const Login = () => {
             })
             .catch(error => {
                 console.error(error)
+                setLogInError(error.message)
+                if (logInError) {
+                    toast(`${logInError}`)
+                }
             })
     }
 
@@ -54,6 +63,7 @@ const Login = () => {
                     <input placeholder="Password" className="bg-gray-200 rounded-lg p-3 w-4/5" type="password" name="password" id="" />
                     <button className="btn bg-sky-400 text-white block">Login</button>
                 </form>
+                <ToastContainer />
                 <h2 className="my-8">Don't Have An Account ?
                     <Link to={'/register'}>
                         <span className="text-sky-400 ml-2">Register</span>

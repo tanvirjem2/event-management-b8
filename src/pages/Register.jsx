@@ -1,11 +1,15 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Navbar from "../Shared/Navbar";
 import { AuthContext } from "../providers/AuthProvider";
 import Aos from "aos"
 import 'aos/dist/aos.css'
 import { useEffect } from "react"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
+
+    const [registerError, setRegisterError] = useState('')
 
     useEffect(() => {
         Aos.init({ duration: 1000 });
@@ -30,6 +34,10 @@ const Register = () => {
             // Error
             .catch(error => {
                 console.error(error);
+                setRegisterError(error.message)
+                if (registerError) {
+                    toast(`${registerError}`)
+                }
             })
     }
 
@@ -45,9 +53,11 @@ const Register = () => {
                     <input placeholder="Email" className="bg-gray-200 rounded-lg p-3 w-4/5" type="email" name="email" id="email" />
                     <h2>Password</h2>
                     <input placeholder="Password" className="bg-gray-200 rounded-lg p-3 w-4/5" type="password" name="password" id="password" />
-                    <button className="btn bg-sky-400 text-white block">Login</button>
+                    <button className="btn bg-sky-400 text-white block">Register</button>
+
                 </form>
                 <p className="mt-5 font-semibold">Go back to login</p>
+                <ToastContainer />
             </div>
         </div>
     );
