@@ -15,9 +15,6 @@ const ServiceDetails = () => {
     // use of find 
     const service = services.find(service => service.id == idInt)
 
-
-    console.log(service)
-
     const { image, name, description } = service
 
     return (
