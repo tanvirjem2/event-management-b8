@@ -80,9 +80,6 @@ const Login = () => {
                         <span className="text-sky-400 ml-2">Register</span>
                     </Link>
                 </h2>
-                <div className="flex items-center justify-center mt-2">
-                    <button className="btn"><FcGoogle />login with google</button>
-                </div>
             </div>
         </div>
     );

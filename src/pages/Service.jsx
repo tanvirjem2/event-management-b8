@@ -6,7 +6,7 @@ import { useEffect } from "react"
 const Service = ({ service }) => {
 
     useEffect(() => {
-        Aos.init({ duration: 1000 });
+        Aos.init();
     }, [])
 
     console.log(service)

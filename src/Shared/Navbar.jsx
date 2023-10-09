@@ -1,10 +1,47 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
+import { FcGoogle } from 'react-icons/fc';
+import app from "../firebase/firebase.config";
+import { GoogleAuthProvider, getAuth, signInWithPopup, signOut } from "firebase/auth";
 
 const Navbar = () => {
 
+    // useState ()
+    const [googleUser, setGoogleUser] = useState(null)
+
     const { user, logOut } = useContext(AuthContext)
+
+    // Auth
+    const auth = getAuth(app);
+
+    // Provider
+    const provider = new GoogleAuthProvider()
+
+    // handle Google sign in
+    const handleGoogleSignIn = () => {
+        signInWithPopup(auth, provider)
+            .then(result => {
+                const loggedInUser = result.user;
+                setGoogleUser(loggedInUser);
+            })
+            .catch(error => {
+                console.log('error', error.message)
+            })
+        console.log('clicked');
+    }
+
+    // handle sign out
+    const handleGoogleSignOut = () => {
+        signOut(auth)
+            .then((result) => {
+                setGoogleUser(null)
+                console.log(result);
+            })
+            .catch((error) => {
+                console.log('error', error.message)
+            })
+    }
 
     const handleSignOut = () => {
         logOut()
@@ -41,7 +78,26 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end gap-6">
+
+                    {googleUser &&
+                        <div className="">
+                            <img className="rounded-full w-[40px] h-[40px] mx-auto" src={googleUser.photoURL} alt="" />
+                            <div>
+                                <h2 className="text-center"><span className="font-semibold">Name:</span> {googleUser.displayName}</h2>
+                            </div>
+                        </div>
+                    }
+
+                    {googleUser ?
+                        <button onClick={handleGoogleSignOut}
+                            className="btn">Sign Out
+                        </button>
+                        :
+                        <button onClick={handleGoogleSignIn}
+                            className="btn"><FcGoogle />login with google
+                        </button>
+                    }
                     {user ?
                         <button onClick={handleSignOut} className="btn">Logout</button>
                         :
