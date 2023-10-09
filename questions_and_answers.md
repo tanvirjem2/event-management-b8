@@ -69,7 +69,7 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: A . The main reason why changing the 'info.favoriteFood' property does not affect the 'food' array is because these two variables hold different references to distinct data structures in memory.
+#### Answer: A .
 
 <i> The main reason why changing the 'info.favoriteFood' property does not affect the 'food' array is because these two variables hold different references to distinct data structures in memory.</i>
 
